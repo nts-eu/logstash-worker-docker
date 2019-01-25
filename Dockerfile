@@ -20,4 +20,3 @@ VOLUME /usr/share/logstash/pipeline/
 ENV BW_RATE 5mbit
 ENV BW_CEIL 10mbit
 
-CMD /opt/init.sh
