@@ -14,5 +14,5 @@ RUN logstash-plugin install logstash-output-lumberjack
 RUN logstash-plugin install logstash-filter-json_encode
 RUN /opt/init.sh
 
-ENV BW_RATE
-ENV BW_CEIL
+ENV BW_RATE 5mbit
+ENV BW_CEIL 10mbit
