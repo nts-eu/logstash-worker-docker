@@ -1,0 +1,11 @@
+[Unit]
+Description=loading init.sh for BW limitation
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/init.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy=default.target
