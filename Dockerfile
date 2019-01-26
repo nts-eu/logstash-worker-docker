@@ -2,6 +2,7 @@ FROM docker.elastic.co/logstash/logstash:6.4.3
 
 COPY ./init.sh /opt/init.sh
 COPY ./extnts_root_ca.pem /etc/pki/ca-trust/source/anchors/extnts_root_ca.pem
+COPY ./custom.service /etc/systemd/system/custom.service
 
 RUN logstash-plugin install logstash-input-lumberjack
 RUN logstash-plugin install logstash-output-lumberjack
@@ -14,10 +15,11 @@ RUN yum install -y \
     iptables \
     net-tools 
 RUN chmod +x /opt/init.sh
+RUN systemctl daemon-reload
+RUN systemctl enable custom.service
 
 USER logstash
 
 ENV BW_RATE 5mbit
 ENV BW_CEIL 10mbit
-
 VOLUME ["/usr/share/logstash/cert/","/usr/share/logstash/pipeline/"]
