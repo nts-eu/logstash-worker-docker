@@ -15,7 +15,6 @@ RUN yum install -y \
     iptables \
     net-tools 
 RUN chmod +x /opt/init.sh
-RUN systemctl daemon-reload
 RUN systemctl enable custom.service
 
 USER logstash
