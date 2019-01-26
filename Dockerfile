@@ -13,6 +13,7 @@ RUN yum install -y \
     iproute \
     iptables \
     net-tools 
+RUN chmod +x /opt/init.sh
 
 USER logstash
 
