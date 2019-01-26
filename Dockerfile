@@ -14,9 +14,9 @@ RUN yum install -y \
     iptables \
     net-tools 
 
-VOLUME /usr/share/logstash/cert/
-VOLUME /usr/share/logstash/pipeline/
+USER logstash
 
 ENV BW_RATE 5mbit
 ENV BW_CEIL 10mbit
 
+VOLUME ["/usr/share/logstash/cert/","/usr/share/logstash/pipeline/"]
