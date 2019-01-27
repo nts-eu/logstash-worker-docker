@@ -19,6 +19,7 @@ RUN systemctl enable custom.service
 
 USER logstash
 
+ENV XPACK_MONITORING_ENABLED false
 ENV BW_RATE 5mbit
 ENV BW_CEIL 10mbit
 ENV OUTPUT_LUMBERJACK_HOSTS: ['1.1.1.1']
