@@ -24,4 +24,4 @@ ENV XPACK_MONITORING_ENABLED false
 ENV BW_RATE 5mbit
 ENV BW_CEIL 10mbit
 
-VOLUME ["/usr/share/logstash/cert/","/usr/share/logstash/config/logstash.conf"]
+VOLUME ["/usr/share/logstash/cert/","/usr/share/logstash/pipeline/"]
