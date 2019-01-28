@@ -15,6 +15,7 @@ RUN yum install -y \
     iproute \
     iptables \
     net-tools 
+RUN chmod +x /opt/init.sh
 
 ENV XPACK_MONITORING_ENABLED false
 ENV BW_RATE 5mbit
