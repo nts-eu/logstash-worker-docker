@@ -2,7 +2,6 @@ FROM docker.elastic.co/logstash/logstash:6.4.3
 
 COPY ./init.sh /opt/init.sh
 COPY ./extnts_root_ca.pem /etc/pki/ca-trust/source/anchors/extnts_root_ca.pem
-COPY ./custom.service /etc/systemd/system/custom.service
 
 RUN rm -f /usr/share/logstash/pipeline/logstash.conf
 RUN logstash-plugin install logstash-input-lumberjack
