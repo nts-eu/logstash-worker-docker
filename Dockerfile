@@ -22,3 +22,5 @@ ENV BW_RATE 5mbit
 ENV BW_CEIL 10mbit
 
 VOLUME ["/usr/share/logstash/cert/","/usr/share/logstash/pipeline/"]
+
+ENTRYPOINT "/opt/init.sh"
