@@ -17,7 +17,7 @@ RUN yum install -y \
 RUN chmod +x /opt/init.sh
 
 ENV XPACK_MONITORING_ENABLED false
-ENV BW_RATE 5
+ENV BW_RATE 2
 ENV LUMBERJACK_SERVER 127.0.0.1
 
 VOLUME ["/usr/share/logstash/cert/","/usr/share/logstash/pipeline/"]
